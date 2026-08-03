@@ -9,10 +9,19 @@ base {
     archivesName.set("nodebuffutils")
 }
 
+repositories {
+    // terraformersmc.com hangs on HEAD/POM probes; resolve modmenu by artifact only
+    maven("https://maven.terraformersmc.com/releases") {
+        metadataSources {
+            artifact()
+        }
+    }
+}
+
 dependencies {
     minecraft("com.mojang:minecraft:26.2")
     implementation("net.fabricmc:fabric-loader:0.19.3")
-    implementation("net.fabricmc.fabric-api:fabric-api:0.156.0+26.2")
+    compileOnly("com.terraformersmc:modmenu:20.0.1")
 }
 
 java {

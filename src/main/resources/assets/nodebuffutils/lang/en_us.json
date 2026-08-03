@@ -1,5 +1,5 @@
 {
-  "key.categories.nodebuffutils": "Nodebuff Utils",
-  "key.nodebuffutils.toggle_eating": "Toggle Old Eating",
-  "key.nodebuffutils.toggle_use_priority": "Toggle Item Use Priority"
+  "screen.nodebuffutils.title": "Nodebuff Utils",
+  "screen.nodebuffutils.old_eating": "Old Eating (drop-eating)",
+  "screen.nodebuffutils.item_use_priority": "Item Use Priority (pot-priority)"
 }
