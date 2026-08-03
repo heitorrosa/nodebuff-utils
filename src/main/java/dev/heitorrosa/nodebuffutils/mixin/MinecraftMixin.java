@@ -11,12 +11,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
-/**
- * 1.7.10-style click priority: right-click (use item) starts even while
- * left-clicking, instead of vanilla aborting {@code startUseItem} while
- * {@code MultiPlayerGameMode.isDestroying()}. The hold-repeat path keeps its
- * vanilla throttle (no machine-gunning buckets while attacking).
- */
+
 @Mixin(Minecraft.class)
 public class MinecraftMixin {
 

@@ -8,9 +8,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-/**
- * Toggle state for both patches, persisted to config/nodebuff-utils.json.
- */
+
 public final class NodebuffUtilsConfig {
 
     private static final Path PATH = FabricLoader.getInstance().getConfigDir().resolve("nodebuff-utils.json");

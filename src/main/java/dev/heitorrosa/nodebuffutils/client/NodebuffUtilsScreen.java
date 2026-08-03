@@ -6,10 +6,7 @@ import net.minecraft.client.gui.components.Checkbox;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 
-/**
- * Simple config screen with one toggle per feature, opened from the pause-menu
- * Options screen. Persists to config/nodebuff-utils.json on every change.
- */
+
 public class NodebuffUtilsScreen extends Screen {
 
     private final Screen lastScreen;

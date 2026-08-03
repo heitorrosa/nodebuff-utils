@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "nodebuffutils",
   "version": "1.0.0",
-  "name": "Nodebuff Utils",
+  "name": "nodebuff-utils",
   "description": "1.7/1.8 PvP input fixes for Nodebuff: right-click item use while left-clicking, and drop-eating without resetting the eat.",
   "authors": [
     "heitorrosa"
