@@ -1,0 +1,21 @@
+plugins {
+    id("net.fabricmc.fabric-loom") version "1.17-SNAPSHOT"
+}
+
+version = "1.0.0"
+group = "dev.heitorrosa"
+
+base {
+    archivesName.set("nodebuffutils")
+}
+
+dependencies {
+    minecraft("com.mojang:minecraft:26.2")
+    implementation("net.fabricmc:fabric-loader:0.19.3")
+    implementation("net.fabricmc.fabric-api:fabric-api:0.156.0+26.2")
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}

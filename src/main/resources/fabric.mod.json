@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "nodebuffutils",
+  "version": "1.0.0",
+  "name": "Nodebuff Utils",
+  "description": "1.7/1.8 PvP input fixes for Nodebuff: right-click item use while left-clicking, and drop-eating without resetting the eat.",
+  "authors": [
+    "heitorrosa"
+  ],
+  "license": "GPL-3.0",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.heitorrosa.nodebuffutils.client.NodebuffUtilsClient"
+    ]
+  },
+  "mixins": [
+    "nodebuffutils.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.0",
+    "minecraft": "26.2",
+    "fabric-key-mapping-api-v1": "*",
+    "fabric-lifecycle-events-v1": "*"
+  }
+}
