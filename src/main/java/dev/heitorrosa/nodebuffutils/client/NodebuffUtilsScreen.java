@@ -34,10 +34,19 @@ public class NodebuffUtilsScreen extends Screen {
                 NodebuffUtilsConfig.save();
             })
             .build();
+        Checkbox dropCarried = Checkbox.builder(Component.translatable("screen.nodebuffutils.drop_carried_on_close"), this.font)
+            .pos(this.width / 2 - 155, this.height / 2 + 16)
+            .selected(NodebuffUtilsConfig.dropCarriedOnClose)
+            .onValueChange((checkbox, value) -> {
+                NodebuffUtilsConfig.dropCarriedOnClose = value;
+                NodebuffUtilsConfig.save();
+            })
+            .build();
         this.addRenderableWidget(eating);
         this.addRenderableWidget(priority);
+        this.addRenderableWidget(dropCarried);
         this.addRenderableWidget(Button.builder(Component.translatable("gui.done"), button -> this.onClose())
-            .bounds(this.width / 2 - 100, this.height / 2 + 24, 200, 20)
+            .bounds(this.width / 2 - 100, this.height / 2 + 44, 200, 20)
             .build());
     }
 

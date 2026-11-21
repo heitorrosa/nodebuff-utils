@@ -15,6 +15,7 @@ public final class NodebuffUtilsConfig {
 
     public static boolean oldEating = true;
     public static boolean itemUsePriority = true;
+    public static boolean dropCarriedOnClose = true;
 
     private NodebuffUtilsConfig() {
     }
@@ -29,6 +30,9 @@ public final class NodebuffUtilsConfig {
                 if (hasBoolean(json, "itemUsePriority")) {
                     itemUsePriority = json.get("itemUsePriority").getAsBoolean();
                 }
+                if (hasBoolean(json, "dropCarriedOnClose")) {
+                    dropCarriedOnClose = json.get("dropCarriedOnClose").getAsBoolean();
+                }
             }
         } catch (Exception ignored) {
         }
@@ -42,6 +46,7 @@ public final class NodebuffUtilsConfig {
         JsonObject json = new JsonObject();
         json.addProperty("oldEating", oldEating);
         json.addProperty("itemUsePriority", itemUsePriority);
+        json.addProperty("dropCarriedOnClose", dropCarriedOnClose);
         try {
             Files.writeString(PATH, json.toString());
         } catch (IOException ignored) {
