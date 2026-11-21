@@ -5,6 +5,7 @@
   "client": [
     "MinecraftMixin",
     "LocalPlayerMixin",
+    "LocalPlayerAccessor",
     "InventoryCloseMixin"
   ],
   "injectors": {
