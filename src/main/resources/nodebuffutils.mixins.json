@@ -6,7 +6,9 @@
     "MinecraftMixin",
     "LocalPlayerMixin",
     "LocalPlayerAccessor",
-    "InventoryCloseMixin"
+    "InventoryCloseMixin",
+    "HudEffectsMixin",
+    "InventoryEffectsMixin"
   ],
   "injectors": {
     "defaultRequire": 1

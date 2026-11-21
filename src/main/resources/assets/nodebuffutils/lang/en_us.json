@@ -2,5 +2,6 @@
   "screen.nodebuffutils.title": "nodebuff-utils",
   "screen.nodebuffutils.old_eating": "Old Eating",
   "screen.nodebuffutils.item_use_priority": "Item Use Priority",
-  "screen.nodebuffutils.drop_carried_on_close": "Drop Held Item On Close"
+  "screen.nodebuffutils.drop_carried_on_close": "Drop Held Item On Close",
+  "screen.nodebuffutils.hide_status_effects": "Hide Status Effects"
 }

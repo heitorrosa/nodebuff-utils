@@ -16,6 +16,7 @@ public final class NodebuffUtilsConfig {
     public static boolean oldEating = true;
     public static boolean itemUsePriority = true;
     public static boolean dropCarriedOnClose = true;
+    public static boolean hideStatusEffects = true;
 
     private NodebuffUtilsConfig() {
     }
@@ -33,6 +34,9 @@ public final class NodebuffUtilsConfig {
                 if (hasBoolean(json, "dropCarriedOnClose")) {
                     dropCarriedOnClose = json.get("dropCarriedOnClose").getAsBoolean();
                 }
+                if (hasBoolean(json, "hideStatusEffects")) {
+                    hideStatusEffects = json.get("hideStatusEffects").getAsBoolean();
+                }
             }
         } catch (Exception ignored) {
         }
@@ -47,6 +51,7 @@ public final class NodebuffUtilsConfig {
         json.addProperty("oldEating", oldEating);
         json.addProperty("itemUsePriority", itemUsePriority);
         json.addProperty("dropCarriedOnClose", dropCarriedOnClose);
+        json.addProperty("hideStatusEffects", hideStatusEffects);
         try {
             Files.writeString(PATH, json.toString());
         } catch (IOException ignored) {

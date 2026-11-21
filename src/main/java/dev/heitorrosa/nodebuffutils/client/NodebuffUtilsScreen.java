@@ -42,11 +42,20 @@ public class NodebuffUtilsScreen extends Screen {
                 NodebuffUtilsConfig.save();
             })
             .build();
+        Checkbox hideStatusEffects = Checkbox.builder(Component.translatable("screen.nodebuffutils.hide_status_effects"), this.font)
+            .pos(this.width / 2 - 155, this.height / 2 + 44)
+            .selected(NodebuffUtilsConfig.hideStatusEffects)
+            .onValueChange((checkbox, value) -> {
+                NodebuffUtilsConfig.hideStatusEffects = value;
+                NodebuffUtilsConfig.save();
+            })
+            .build();
         this.addRenderableWidget(eating);
         this.addRenderableWidget(priority);
         this.addRenderableWidget(dropCarried);
+        this.addRenderableWidget(hideStatusEffects);
         this.addRenderableWidget(Button.builder(Component.translatable("gui.done"), button -> this.onClose())
-            .bounds(this.width / 2 - 100, this.height / 2 + 44, 200, 20)
+            .bounds(this.width / 2 - 100, this.height / 2 + 72, 200, 20)
             .build());
     }
 
