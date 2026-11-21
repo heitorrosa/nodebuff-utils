@@ -23,11 +23,19 @@ public final class NodebuffUtilsConfig {
         try {
             if (Files.exists(PATH)) {
                 JsonObject json = JsonParser.parseString(Files.readString(PATH)).getAsJsonObject();
-                oldEating = json.get("oldEating").getAsBoolean();
-                itemUsePriority = json.get("itemUsePriority").getAsBoolean();
+                if (hasBoolean(json, "oldEating")) {
+                    oldEating = json.get("oldEating").getAsBoolean();
+                }
+                if (hasBoolean(json, "itemUsePriority")) {
+                    itemUsePriority = json.get("itemUsePriority").getAsBoolean();
+                }
             }
         } catch (Exception ignored) {
         }
+    }
+
+    private static boolean hasBoolean(JsonObject json, String key) {
+        return json != null && json.has(key) && json.get(key) != null && json.get(key).isJsonPrimitive();
     }
 
     public static void save() {

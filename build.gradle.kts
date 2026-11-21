@@ -19,9 +19,9 @@ repositories {
 }
 
 dependencies {
-    minecraft("com.mojang:minecraft:26.2")
+    minecraft("com.mojang:minecraft:26.3")
     implementation("net.fabricmc:fabric-loader:0.19.3")
-    compileOnly("com.terraformersmc:modmenu:20.0.1")
+    compileOnly("com.terraformersmc:modmenu:21.0.0")
 }
 
 java {
